@@ -54,9 +54,7 @@ Among the most actively traded futures contracts are those based on U.S. Treasur
 
 2. **Futures Price Formula**: If the spot price ($S_0$) is quoted as a clean price, the futures price can be calculated as:
 
-   $$
-   FP_0 = \left( S_0 - AI_0 \times (1 + R_f)^T \right) \times CF
-   $$
+   $FP_0 = ( S_0 - AI_0 \times (1 + R_f)^T ) \times CF$
 
    Where:
 
@@ -132,19 +130,13 @@ Options are versatile instruments that allow investors to design strategies base
 
 - **Objective:** Earn premium income by selling call options on owned stock, potentially increasing returns or selling stock near a target price.
 - **Construction:** Long stock + short call option. Suitable when expecting limited price appreciation.
-- **Profit/Loss:**
-  $$
-  \text{Profit} = (S_T - S_0) - \left[\max(0, (S_T - X)) - C\right]
-  $$
+- **Profit/Loss:** $\text{Profit} = (S_T - S_0) - \left[\max(0, (S_T - X)) - C\right]$
 
 #### 2. Protective Put
 
 - **Objective:** Protect against downside risk for owned stock by purchasing put options.
 - **Construction:** Long stock + long put option, effectively acting as insurance.
-- **Profit/Loss:**
-  $$
-  \text{Profit} = (S_T - S_0) + \left[\max(0, (X - S_T)) - P\right]
-  $$
+- **Profit/Loss:** $\text{Profit} = (S_T - S_0) + \left[\max(0, (X - S_T)) - P\right]$
 
 #### 3. Writing Puts
 
@@ -154,14 +146,8 @@ Options are versatile instruments that allow investors to design strategies base
 
 #### 4.Bull Spread
 
-- **Bull Call Spread:** Buy a call option with a lower strike price ($X_L$) and sell one with a higher strike price ($X_H$). Suitable for moderate bullish outlooks.
-  $$
-  \text{Profit} = [\max(0, (S_T - X_L)) - C_L] - [\max(0, (S_T - X_H)) - C_H]
-  $$
-- **Bull Put Spread:** Buy a put option with a lower strike price ($X_L$) and sell one with a higher strike price ($X_H$). Suitable for slightly bullish markets.
-  $$
-  \text{Profit} = [\max(0, (X_L - S_T)) - P_L] - [\max(0, (X_H - S_T)) - P_H]
-  $$
+- **Bull Call Spread:** Buy a call option with a lower strike price ($X_L$) and sell one with a higher strike price ($X_H$), suitable for moderate bullish outlooks. $\text{Profit} = [\max(0, (S_T - X_L)) - C_L] - [\max(0, (S_T - X_H)) - C_H]$
+- **Bull Put Spread:** Buy a put option with a lower strike price ($X_L$) and sell one with a higher strike price ($X_H$), suitable for slightly bullish markets. $\text{Profit} = [\max(0, (X_L - S_T)) - P_L] - [\max(0, (X_H - S_T)) - P_H]$
 
 #### 5. Bear Spread
 
@@ -321,11 +307,7 @@ A **plain vanilla swap** is a simple interest rate swap where one party pays a f
    At the start of the swap, the value of a floating rate bond is assumed to equal its face value. This ensures the present value of floating rate cash flows matches the notional amount.
 
 2. **Fixed Rate Bonds:**  
-   The fixed rate bond’s value is calculated using the following formula for the fixed coupon rate ($C$):
-
-   $$
-   C = \frac{1 - B_n}{B_1 + B_2 + \cdots + B_n}
-   $$
+   The fixed rate bond’s value is calculated using the following formula for the fixed coupon rate ($C$): $C = \frac{1 - B_n}{B_1 + B_2 + \cdots + B_n}$
 
    Where:
 
@@ -356,14 +338,14 @@ An investor can use an **interest rate swap** to convert floating-rate liabiliti
 1. The net cash flow difference for a fixed-rate payer is expressed as:
 
    $$
-   D*{\text{pay-fixed}} = D*{\text{floating}} - D\_{\text{fixed}}
+   D_{\text{pay-fixed}} = D_{\text{floating}} - D_{\text{fixed}}
    $$
 
 2. **Hedge Ratio (BPV):**  
    Basis point value (BPV) measures the sensitivity of a bond’s price to changes in interest rates. The hedge ratio (BPVHR) for interest rate risk is calculated as:
 
    $$
-   BPVHR = \frac{BPV*T - BPV_p}{BPV*{CTD}} \times CF
+   BPVHR = \frac{BPV\*T - BPV_p}{BPV\*{CTD}} \times CF
    $$
 
    Where $CF$ is the conversion factor for the CTD bond.
@@ -555,9 +537,9 @@ These products are suitable for investors seeking to amplify their exposure but 
 
 Foreign exchange (FX) derivatives are financial instruments based on currency pairs in the foreign exchange market. These tools are used to manage currency risk, speculate on exchange rate movements, or engage in arbitrage. FX derivatives, such as forwards, options, and swaps, allow market participants to hedge against currency fluctuations, profit from exchange rate changes, or gain exposure to specific currency movements.
 
-### Using FX Derivatives for Risk Management\*\*
+### Using FX Derivatives for Risk Management
 
-1. ** Forward Contracts**
+1. **Forward Contracts**
 
 - **Definition:**  
   A forward contract is an agreement between two parties to exchange currencies at a specified exchange rate (the forward rate) on a future date.
@@ -674,7 +656,7 @@ Where:
 
 ---
 
-## 8. Volatility Derivatives: An Overview
+## 8. Volatility Derivatives
 
 Volatility derivatives are financial instruments based on the volatility of an underlying asset, such as stocks, indices, forex, or commodities. These derivatives allow investors to speculate on or hedge against the risk of market volatility without directly trading the price of the underlying asset. The price of volatility derivatives is typically linked to the volatility of the asset, which represents the degree of price fluctuation.
 
@@ -696,10 +678,7 @@ Volatility derivatives are financial instruments based on the volatility of an u
 
 2. **Put-Call Parity Theory**
 
-   - **Put-Call Parity**: The relationship between long call options and long put options can be described as:
-     $$
-     \text{Long Call Option} - \text{Long Put Option} = \text{Forward Contract}
-     $$
+   - **Put-Call Parity**: The relationship between long call options and long put options can be described as: $\text{Long Call Option} - \text{Long Put Option} = \text{Forward Contract}$
    - By Delta hedging, European options align with forward contracts in terms of payoff, but American options only approximate this relationship.
 
 3. **Forward Contracts and Dividends, Borrowing Costs**
@@ -718,9 +697,7 @@ Volatility derivatives are financial instruments based on the volatility of an u
 
    According to the Black-Scholes model, assuming zero interest rate (r=0) and no dividends, the **ATM option price** is:
 
-   $$
-   \text{ATM Option Price} = \sigma \times \sqrt{T} / \sqrt{2\pi}
-   $$
+   $\text{ATM Option Price} = \sigma \times \sqrt{T} / \sqrt{2\pi}$
 
    Where:
 
@@ -730,9 +707,7 @@ Volatility derivatives are financial instruments based on the volatility of an u
 
    The strike price for a zero-Delta straddle is derived by the formula:
 
-   $$
-   K = S \cdot e^{\frac{\sigma^2}{2}T}
-   $$
+   $K = S \cdot e^{\frac{\sigma^2}{2}T}$
 
    Where:
 
@@ -755,9 +730,7 @@ Volatility derivatives are financial instruments based on the volatility of an u
 2. **Daily Delta Hedging P&L**
    The daily profit and loss (P&L) from Delta hedging consists of three components:
 
-   $$
-   \text{Daily P\&L} = \text{Delta Profit} + \text{Gamma Profit} + \text{Theta Profit}
-   $$
+   $\text{Daily P\&L} = \text{Delta Profit} + \text{Gamma Profit} + \text{Theta Profit}$
 
    - Delta profit (Sδ) is directly tied to the price change of the underlying asset.
    - Gamma profit ($S^2 \gamma / 2$) is associated with the price change squared, which is the main benefit of convexity.
@@ -766,15 +739,11 @@ Volatility derivatives are financial instruments based on the volatility of an u
 3. **Profit after Delta Hedging**
    After eliminating Delta exposure, the P&L from hedging is:
 
-   $$
-   \text{Delta-hedged P\&L} = \frac{S^2\gamma}{2} + t\theta
-   $$
+   $\text{Delta-hedged P\&L} = \frac{S^2\gamma}{2} + t\theta$
 
    If Theta costs are ignored (since they are unrelated to price movement), the result is:
 
-   $$
-   \text{Delta-hedged P\&L} \propto \frac{\gamma}{2} \times (\text{Price change})^2
-   $$
+   $\text{Delta-hedged P\&L} \propto \frac{\gamma}{2} \times (\text{Price change})^2$
 
    **Conclusion**: If the price change increases from 1% to 2%, the profit increases from 1 to 4 (since $2^2 = 4$).
 
@@ -796,9 +765,7 @@ Volatility derivatives are financial instruments based on the volatility of an u
 1. **Variance Swap**:  
    A **Variance Swap** is a derivative contract where the payoff is based on the variance (the square of volatility) of the underlying asset. The formula for variance swaps is:
 
-   $$
-   (\sigma_F^2 - \sigma_S^2) \times \text{Variance Notional}
-   $$
+   $(\sigma_F^2 - \sigma_S^2) \times \text{Variance Notional}$
 
    Where:
 
@@ -808,9 +775,7 @@ Volatility derivatives are financial instruments based on the volatility of an u
 2. **Volatility Swap**:  
    A **Volatility Swap** has a payoff based on the realized volatility compared to the agreed-upon fixed volatility. The formula for volatility swaps is:
 
-   $$
-   (\sigma_F - \sigma_S) \times \text{Volatility Notional}
-   $$
+   $(\sigma_F - \sigma_S) \times \text{Volatility Notional}$
 
    Where:
 
