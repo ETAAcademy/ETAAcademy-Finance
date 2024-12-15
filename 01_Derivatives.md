@@ -726,7 +726,7 @@ Volatility derivatives are financial instruments based on the volatility of an u
 2. **Daily Delta Hedging P&L**
    The daily profit and loss (P&L) from Delta hedging consists of three components:
 
-   $\text{Daily P\&L} = \text{Delta Profit} + \text{Gamma Profit} + \text{Theta Profit}$
+   $\text{Daily PL} = \text{Delta Profit} + \text{Gamma Profit} + \text{Theta Profit}$
 
    - Delta profit (Sδ) is directly tied to the price change of the underlying asset.
    - Gamma profit ($S^2 \gamma / 2$) is associated with the price change squared, which is the main benefit of convexity.
@@ -735,11 +735,11 @@ Volatility derivatives are financial instruments based on the volatility of an u
 3. **Profit after Delta Hedging**
    After eliminating Delta exposure, the P&L from hedging is:
 
-   $\text{Delta-hedged P\&L} = \frac{S^2 \gamma}{2} + t \theta$
+   $\text{Delta-hedged PL} = \frac{S^2 \gamma}{2} + t \theta$
 
    If Theta costs are ignored (since they are unrelated to price movement), the result is:
 
-   $\text{Delta-hedged P\&L} \propto \frac{\gamma}{2} \times (\text{Price change})^2$
+   $\text{Delta-hedged PL} \propto \frac{\gamma}{2} \times (\text{Price change})^2$
 
    **Conclusion**: If the price change increases from 1% to 2%, the profit increases from 1 to 4 (since $2^2 = 4$).
 
